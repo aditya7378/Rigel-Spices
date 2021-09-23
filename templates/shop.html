@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Shop Rigel Spices {% endblock %}
+{% block content %}
+    <!-- Shop Header section-->
+
+    <section class="shop_header layout_padding">
+        <div class="container">
+            <h1>WELCOME TO RIGEL SPICES SHOP</h1>
+        </div>
+    </section>
+
+    <!-- end shop header section -->
+
+    <!-- products section -->
+
+    <section>
+        <div class="up-container">
+            <nav>
+                <ul class="shop-nav ">
+                    <li class="nav-item active">
+                        <a href="{% url 'shop' %}">Rice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'oil' %}">Oil</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{% url 'pulses' %}">Pulses</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="container lower-container">          
+            <div class="row">
+              {% for product in products %}
+                <div class="col-md-4">
+                    <a href="productdetail/{{product.id}}">
+                        <img src="{{product.img.url}}" class="product_img">
+                        <div class="overlay">
+                            <div class="text">
+                                <h4>{{product.name}}</h4>
+                                <p>Rs {{product.price}}/-</p>
+                                <p style="font-size: 12px;">Click to view</p>
+                            </div>
+                        </div>
+                        <p style="color: black;">  {{product.category.name}}</p>
+                      </a>
+                    </div>
+              {% endfor %}
+            </div>
+    </section>
+    <!-- end products section -->
+
+  {% endblock %}
+  

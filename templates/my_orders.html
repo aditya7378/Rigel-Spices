@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Rigel Spices {% endblock %}
+{% block content %}
+    <!-- Orders sections -->
+
+    <div class="container orders">
+        <h1>MY ORDERS</h1>
+        <hr>
+        {% if orders%}
+        <div class="container-fluid ordertable" style="overflow-x: auto;">
+            
+            <table>
+                <tr>
+                    <th></th>
+                    <th>PRODUCT</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>STATUS</th>
+                </tr>
+                {% for order in orders %}
+                <tr>
+                    <td>
+                        <img src="{{order.product.img.url}}" width="200px" height="auto" class="product-image">
+                    </td>
+                    <td>
+                        <a href="">{{order.product.name}}</a>
+                    </td>
+                    <td>Rs. {{order.product.price}}</td>
+                    <td>
+                        {{order.quantity}}
+                    </td>
+                    <td>
+                        Accepted
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+            {% else %}
+            <br><br><br>
+            <h2 class="text-center">No Orders Placed..!!!</h2><br>
+            <div class="text-center">
+                <a href="{% url 'shop' %}" class="btn btn-primary">Continue Shopping</a>
+            </div><br><br><br>
+            {% endif %}
+    </div>
+
+{% endblock %}

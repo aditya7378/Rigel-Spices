@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock %}
+{% block content %}
+    <!-- Cart header section -->
+      
+    <section class="shop_header layout_padding">
+      <div class="container">
+          <h1>WELCOME TO RIGEL SPICES CART</h1>
+      </div>
+    </section>
+
+    <!-- end cart header -->
+
+    <!-- cart section -->
+<body>
+  {% if cart_items %}
+      <div class="container cart" style="overflow-x: auto;">
+        
+        <table>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>PRODUCT</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>TOTAL</th>
+          </tr>
+          
+          {% for cart_item in cart_items %}
+          <tr>
+            <td>
+              <a href="{% url 'remove_cart' cart_item.product.id %}" id="myBtnRemove" ><i class="fa fa-times"></i></a>
+              <div id="myModalRemove" class="modal_msg">
+                <!-- Modal content -->
+                <div class="modal_msg-content">
+                  <span class="close_modal_remove"><i class="fa fa-times-circle"></i></span>
+                  <p><i class="fa fa-check-circle" style="color: white;"></i> Removed</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <img src="{{cart_item.product.img.url}}" width="200px" height="auto" class="product-image">
+            </td>
+            <td>
+              <a href="">{{cart_item.product.name}}</a>
+            </td>
+            <td>Rs.{{cart_item.product.price}}</td>
+            <td>
+              <a href="{% url 'minus_cart' cart_item.product.id %}"><img src="{% static 'images/minus.png' %}" class="plus-minus" width="20px" height="auto"></a>
+              <input type="number" id="item_quantity" value={{cart_item.quantity}} placeholder="1">
+              <a href="{% url 'add_cart' cart_item.product.id %}"><img src="{% static 'images/add.png' %}" class="plus-minus" width="20px" height="auto"></a>
+            </td>
+            <td>Rs.{{cart_item.get_quantitywise_price | floatformat:2}}</td>
+          </tr>
+          {% endfor %}
+          
+
+       </table>
+      </div>
+       {% else %}
+       <br><br><br>
+          <h2 class="text-center">Your Shopping Cart is Empty</h2><br>
+          <div class="text-center">
+            <a href="{% url 'shop' %}" class="btn btn-primary">Continue Shopping</a>
+          </div><br><br><br>
+          {% endif %}
+
+      <div class="container coupon-cart">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Coupon</h4>
+            <hr>
+            <p style="color: black;">Enter coupon code if you have any :</p>
+            <input type="text" placeholder="Coupon Code">
+            <button type="submit">Apply Coupon</button>
+          </div>
+          <div class="col-md-6">
+            <h4>Cart Totals</h4>
+            <hr>
+            <table>
+              <tr>
+                <td>Shipping Charges</td>
+                <td>Rs.59</td>
+              </tr>
+              <tr>
+                <td>TOTAL</td>
+                <td>Rs. {{total | floatformat:2}}</td>
+              </tr>
+            </table>
+            <a href="{% url 'checkout'%}" class="checkout-button">Proceed to Checkout</a>
+          </div>
+        </div>
+      </div>
+    
+</body>
+<script>
+  // Get the modal
+  var modal_remove = document.getElementById("myModalRemove");
+
+  // Get the button that opens the modal
+  var btn_remove = document.getElementById("myBtnRemove");
+
+  // Get the <span> element that closes the modal
+  var span_remove = document.getElementsByClassName("close_modal_remove")[0];
+
+  // When the user clicks on the button, open the modal
+  btn_remove.onclick = function () {
+    modal_remove.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span_remove.onclick = function () {
+    modal_remove.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event_remove) {
+      if (event_remove.target == modal_remove) {
+          modal_remove.style.display = "none";
+      }
+  }
+
+  //Disappeares after 7 seconds
+  function hideRemove() {
+    document.getElementById("myModalRemove").style.display = "none";
+  }
+  setTimeout("hideRemove()", 7000);
+</script>
+
+    <!-- end cart section -->
+{% endblock %}

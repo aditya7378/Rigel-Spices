@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Rigel Spices {% endblock %}
+{% block content %}
+  <!-- blog section start -->
+
+  <section>
+    <div class="container blog">
+      <h1 class="blog-heading">BLOG</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <video width="580" height="300" controls
+             src="{% static 'images/blog-video.mp4' %}">
+            </video>
+          </div>
+        </div>
+        <div class="col-md-6 mapillaisamba">
+            <div class="heading_container justify-content-end">
+              <h2 style="color: #207228; text-align: left; font-weight: 300;">
+                Mapillai Samba – the wonder rice!
+              </h2>
+            </div>
+            <p style="color: black; margin-left: 10px;">
+              Meals…check. Idli…check. Dosai…check. Aapam…check. Idiyappam…check. Pongal…check. Adai…check. 
+              Kuzhi paniyaaram…check.
+            </p>
+            <br>
+            <p style="color: #207228; margin-left: 10px; font-weight: 600;"> We could go on..</p>
+            <br>
+            <ul>
+              <li>One rice.</li>
+              <li>Endless possibilities.</li>
+              <li>Loads of nutrients.</li>
+            </ul>
+            <span style="margin-left: 10px; font-size: 16px;">
+              <a href="https://www.facebook.com/hashtag/mapillaisamba">#mapillaisamba</a>
+              <a href="https://www.facebook.com/hashtag/rigelspices">#rigelspices</a>
+              <a href="https://www.facebook.com/hashtag/nativeredrice">#NativeRedRice</a>
+              <a href="https://www.rigelspices.com/blog/hashtags/IndianRedRice">#IndianRedRice</a>
+              <a href="https://www.rigelspices.com/blog/hashtags/MachiandBro" style="margin-left: 10px;">#MachiandBro</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container blog">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 style="color: #207228; text-align: left; font-weight: 300;">
+            I have been searching this rice for nearly 3 years!
+          </h2>
+          <p style="color: black; text-align: justify; margin-top: 2%; margin-bottom: 2%;">
+            <b>Mapillai Samba</b> – the wonder rice! “I have been searching this rice for nearly 3 years!” Thank you for 
+            introducing to a healthy eating habit” “These were more softer than the idlis made from regular rice” 
+            Some snippets from the feedback from our customers. Just what you need to keep you going to ensure the 
+            right quality of produce. Note that we source directly from farmers.
+          </p>
+          <span style="font-size: 16px;">
+            <a href="https://www.facebook.com/hashtag/savefarmers">#SaveFarmers</a>
+            <a href="https://www.facebook.com/hashtag/directfromfarm">#DirectFromFarm</a>
+            <a href="https://www.facebook.com/hashtag/mapillaisamba">#mapillaisamba</a>
+            <a href="https://www.facebook.com/hashtag/rigelspices">#rigelspices</a>
+          </span>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'images/blog-img.webp' %}" width="100%" height="300px">
+        </div>
+      </div>
+    </div>
+    <div class="container blog">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'images/about_img.png' %}" width="100%">
+        </div>
+        <div class="col-md-6">
+          <h2 style="color: #207228; text-align: left; font-weight: 300;">
+            Our Story
+          </h2>
+          <p style="color: black; margin-top: 3%; text-align: justify;">
+            <b>Enriching Lives.</b> Do you believe in butterfly theory? We do. A simple action could result in a huge
+            outcome. And we have embarked on a journey in pursuit of unearthing the lost treasure and make it 
+            available to all of us around us. We specialize in premium and ancient varieties of rice and rapidly 
+            expanding our enriching food produce. From tens of thousands of varieties of rice, we have been limited a 
+            rice that are nameless, odorless and tasteless. It is our mission to promote the lesser known ancient 
+            traditional varieties that come with a load of nutrients, to name a few – Mapillai Samba, Karuppu Kavuni, 
+            Kaatu Yaanam, Poongar, Kullakar, Kichili Samba, Seeraga Samba, Ponni.
+          </p>
+          <a href="/ourstory" class="readmorebtn"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end blog section -->
+  
+{%  endblock %}

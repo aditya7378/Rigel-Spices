@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Shop Rigel Spices {% endblock %}
+{% block content %}
+<!-- Shop Header Section  -->
+<section class="shop_header layout_padding">
+    <div class="container">
+        <h1>WELCOME TO RIGEL SPICES SHOP</h1>
+    </div>
+</section>
+
+<!-- end shop header section -->
+
+<!-- Products section -->
+
+<section>
+    <div class="up-container">
+        <nav>
+            <ul class="shop-nav">
+                <li class="nav-item">
+                    <a href="/shop">Rice</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/oil">Oil</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/pulses">Pulses</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container lower-container">
+        <h4 style="text-align: center;">No Products Found ! <i class="fa fa-frown-o" style="color: black;"></i></h4>
+    </div>
+</section>
+
+{% endblock %}

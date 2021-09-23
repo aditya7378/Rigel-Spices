@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Rigel Spices {% endblock %}
+{% block content %}
+  <!-- about section -->
+  <section class="about_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xl-7">
+          <div class="img-box">
+            <video width="580" height="300" controls
+              src="{% static 'images/Video.mp4' %}">
+            </video>
+          </div>
+        </div>
+        <div class="col-md-5 col-xl-5">
+          <div class="detail_box">
+            <div class="heading_container justify-content-end">
+              <img src="{% static 'images/logo-2-half.png' %}"  width="12%" height="auto" style="padding-right: 5px;">
+              <h2 style="color: rgb(59, 5, 5);">
+                About Rigel Spices
+              </h2>
+            </div>
+            <p>
+              We have a responsibility to make this world a better place and we want to start by enriching the lives
+              around us! We are focused on diligently sourcing the finest varieties of life enriching food produce 
+              and make it available to our friends and family at the right price.
+            </p>
+          </div>
+        </div>  
+        <div class="container-fluid" style="margin-top:10%;">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="{% static 'images/SRI-2.jpg' %}" style="margin-left: 12%;">
+              <h5 style="text-align: center; font-family: 'Poppins',sans-serif; margin-top: 5%; font-weight: 600;">DIRECT FROM FARMS</h5>
+              <p>
+                We are proud owners of a farm ourselves and we associate ourselves with a larger community of 
+                farmers. We source our produce from a community of 300+ farmers directly cutting several layers of 
+                middlemen. This way we ensure our farmer community get the right price for their produce and the 
+                right quality to our customers. It is a win-win model.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static 'images/02.jpg' %}" style="margin-left: 12%;">
+              <h5 style="text-align: center; font-family: 'Poppins',sans-serif; margin-top: 5%; font-weight: 600;">FINEST VARIETIES</h5>
+              <p >
+                We are committed to procure only the finest varieties of the produce. For instance, there are 
+                several varieties of Ponni that floods the market. The soil, the water and the climate all have an 
+                equal share in nurturing the crop. Ponni is best nurtured along the banks of river Cauvery. We 
+                procure only that. No compromise.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static 'images/03.jpg' %}" style="margin-left: 12%;">
+              <h5 style="text-align: center; font-family: 'Poppins',sans-serif; margin-top: 5%; font-weight: 600;">QUALITY PROMISE</h5>
+              <p >
+                We mean Quality. Our produce filters through several process checks that ensures quality all the way 
+                from the selection of the finest seeds, to storing the harvested produce in pristine conditions. We age 
+                them more than adequately to get the apt maturity and follow it through with a mother's care until it 
+                gets packed for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid enriching" >
+      <h4 style="margin-top: 3%;">
+        ENRICHING LIVES. <hr style="border: 2px solid green; width: 17%; margin-right: 83%;" class="underline">
+      </h4>
+      <p >
+        Do you believe in butterfly theory? We do. A simple action could result in a huge outcome. And we have 
+        embarked on a journey in pursuit of unearthing the lost treasure and make it available to all of us around 
+        us. We specialize in premium and ancient varieties of rice and rapidly expanding our enriching food produce. 
+        From tens of thousands of varieties of rice, we have been limited a rice that are nameless, odorless and 
+        tasteless. It is our mission to promote the lesser known ancient traditional varieties that come with a load 
+        of nutrients, to name a few – Mapillai Samba, Karuppu Kavuni, Kaatu Yaanam, Poongar, Kullakar, Kichili Samba, 
+        Seeraga Samba, Ponni.
+      </p>
+      <hr>
+      <h4 style="margin-top: 3%;">
+        ENRICHING FARMERS' LIVES. <hr style="border: 2px solid green; width: 27%; margin-right: 80%;" class="underline">
+      </h4>
+      <p >
+        We are proud farmers ourselves and we are closely associated with a larger community of farmers. We directly 
+        source our produce from 300+ farmers cutting down several layers of middle men. Thus, we ensure that our farmers 
+        get the right price while we deliver the right produce to the customers.
+      </p>
+      <hr>
+      <h4 style="margin-top: 3%;">
+        ENRICHED PRODUCE. <hr style="border: 2px solid green; width: 20%; margin-right: 80%;" class="underline">
+      </h4>
+      <p >
+        Quite like the wine that gets better with time, rice becomes healthier, tastier and fluffier with age. Our 
+        paddy is stored for about a year in pristine conditions, before it hits the mills!
+      </p>
+      <hr>
+      <h4 style="margin-top: 3%;">
+        ENRICHING CUSTOMER LIVES. <hr style="border: 2px solid green; width: 27%; margin-right: 80%;" class="underline">
+      </h4>
+      <p >
+        We source Ponni from the paddy ﬁelds that are nurtured by the opulently fertile soil along the banks of 
+        Cauvery. It really does matter where a crop grows. We source the varieties from where it grows the best. 
+        Our produce filters through several process checks that ensures quality all the way from the selection of 
+        the ﬁnest seeds to storing the harvested paddy in pristine conditions.
+      </p>
+    </div>
+  </section>
+
+{% endblock %}
+ 
